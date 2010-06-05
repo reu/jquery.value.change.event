@@ -1,0 +1,7 @@
+Jquery 'change' event only triggers when the input is blurred. You could use the 'keyup' event, but then everytime the key is up, it would trigger the event. This plugin introduces the 'valuechange' event, that works like a keyup, but only triggers when the the actual input value is changed.
+
+Usage:
+
+$("input").bind("valuechange", function(event, oldValue){
+  $(this).next().append("I just changed from " + oldValue + " to " + $(this).val());
+});
