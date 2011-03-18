@@ -2,6 +2,7 @@
   $.event.special.valuechange = {
     setup: function(data, namespaces) {
       $(this).bind("keyup", $.event.special.valuechange.trigger);
+      $(this).bind("keydown", $.event.special.valuechange.trigger);
     },
 
     trigger: function(event) {
